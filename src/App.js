@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
+import Header from "./components/Header";
+import ImgBox from "./components/ImgBox";
+import Footer from "./components/Footer";
 
-function App() {
+// 24 sets of pairs (grid: 4cols x 6rows)
+// prettier-ignore
+const matrix = [
+  [0, 0], [1, 0], [2, 0], [3, 0],
+  [0, 1], [1, 1], [2, 1], [3, 1],
+  [0, 2], [1, 2], [2, 2], [3, 2],
+  [0, 3], [1, 3], [2, 3], [3, 3],
+  [0, 4], [1, 4], [2, 4], [3, 4],
+  [0, 5], [1, 5], [2, 5], [3, 5]
+];
+
+// now it's a function expression
+const App = () => {
+  // TEMPLATE LITERAL
+  // const message = (name) => {
+  //   return `${name} is a front end developer at Vimeo.`;
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <h1>Hello world</h1>
+      {/* TAGGED TEMPLATE LITERAL */}
+      {/* <h2>{message`Dina`}</h2> */}
+      <GlobalStyle />
+      <Header />
+      <Wrapper>
+        <ImageContainer>
+          {matrix.map(([x, y], index) => (
+            <ImgBox key={index} x={x} y={y} />
+          ))}
+        </ImageContainer>
+      </Wrapper>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
