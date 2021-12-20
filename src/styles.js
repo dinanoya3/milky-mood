@@ -27,7 +27,7 @@ export const Marginals = css`
 
 export const ImageContainer = styled.div`
   display: flex;
-  flex: wrap;
+  flex-wrap: wrap;
   position: relative;
   height: 600px;
   width: 400px;

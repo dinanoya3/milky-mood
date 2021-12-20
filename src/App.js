@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GlobalStyle, ImageContainer, Wrapper } from "./styles";
 import Header from "./components/Header";
 import ImgBox from "./components/ImgBox";
@@ -21,6 +21,15 @@ const App = () => {
   // const message = (name) => {
   //   return `${name} is a front end developer at Vimeo.`;
   // };
+  const [distance, setDistance] = useState(1);
+
+  const easing = (num) => Math.pow(num, 3);
+
+  const calculateDistance = ([x, y]) => {
+    // store array containing px positions of center of window
+    const center = [window.innerWidth / 2, window.innerHeight / 2];
+    console.log(center);
+  };
 
   return (
     <>
