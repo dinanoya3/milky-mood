@@ -28,32 +28,37 @@ const App = () => {
   const calculateDistance = ([x, y]) => {
     // store array containing px positions of center of window
     const center = [window.innerWidth / 2, window.innerHeight / 2];
-    console.log(center);
+    // console.log(center);
 
     // store max value of hypotenuse/max distance from center of browser
     const maxHypotenuse = Math.hypot(center[0], center[1]);
-    console.log("maxHypotenuse: ", maxHypotenuse);
+    // console.log("maxHypotenuse: ", maxHypotenuse);
 
     // calculate how far cursor is from center of window
     const hypotenuse = Math.hypot(center[0] - x, center[1] - y);
-    console.log("hypotenuse: ", hypotenuse);
+    // console.log("hypotenuse: ", hypotenuse);
 
     // distance evaluates to a number between 0 and 1
     const distance = hypotenuse / maxHypotenuse;
-    console.log("distance: ", distance);
+    // console.log("distance: ", distance);
 
     const easeDistance = easing(distance);
-    console.log("easeDistance: ", easeDistance);
+    // console.log("easeDistance: ", easeDistance);
 
     setDistance(easeDistance);
   };
 
   const handleMove = ({ clientX, clientY }) => {
-    console.log(clientX, clientY);
+    // console.log(clientX, clientY);
     calculateDistance([clientX, clientY]);
   };
 
-  const handleTouchMove = () => {};
+  const handleTouchMove = ({ touches }) => {
+    // console.log(touches);
+    calculateDistance([touches[0].clientX, touches[0].clientY]);
+  };
+
+  console.log(distance);
 
   return (
     <>
