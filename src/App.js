@@ -29,7 +29,31 @@ const App = () => {
     // store array containing px positions of center of window
     const center = [window.innerWidth / 2, window.innerHeight / 2];
     console.log(center);
+
+    // store max value of hypotenuse/max distance from center of browser
+    const maxHypotenuse = Math.hypot(center[0], center[1]);
+    console.log("maxHypotenuse: ", maxHypotenuse);
+
+    // calculate how far cursor is from center of window
+    const hypotenuse = Math.hypot(center[0] - x, center[1] - y);
+    console.log("hypotenuse: ", hypotenuse);
+
+    // distance evaluates to a number between 0 and 1
+    const distance = hypotenuse / maxHypotenuse;
+    console.log("distance: ", distance);
+
+    const easeDistance = easing(distance);
+    console.log("easeDistance: ", easeDistance);
+
+    setDistance(easeDistance);
   };
+
+  const handleMove = ({ clientX, clientY }) => {
+    console.log(clientX, clientY);
+    calculateDistance([clientX, clientY]);
+  };
+
+  const handleTouchMove = () => {};
 
   return (
     <>
@@ -38,7 +62,7 @@ const App = () => {
       {/* <h2>{message`Dina`}</h2> */}
       <GlobalStyle />
       <Header />
-      <Wrapper>
+      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
         <ImageContainer>
           {matrix.map(([x, y], index) => (
             <ImgBox key={index} x={x} y={y} />
