@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Image } from "./styles";
 
-const ImgBox = ({ x, y }) => {
+const ImgBox = ({ x, y, percent }) => {
   //   console.log(x);
-  return <Image $initialX={x} $initialY={y} />;
+  const [position, setPosition] = useState([0, 0]);
+
+  useEffect(() => {
+    setPosition([
+      // 400 = width of ImageContainer
+      Math.random() * 400 - x * 100 - 50,
+      Math.random() * 600 - y * 100 - 50,
+    ]);
+  }, [x, y]);
+
+  console.log(position);
+
+  return (
+    <Image
+      $initialX={x}
+      $initialY={y}
+      $movedX={position[0] * percent}
+      $movedY={position[1] * percent}
+    />
+  );
 };
 
 export default ImgBox;
