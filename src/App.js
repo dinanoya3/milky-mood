@@ -67,7 +67,12 @@ const App = () => {
       {/* <h2>{message`Dina`}</h2> */}
       <GlobalStyle />
       <Header />
-      <Wrapper onMouseMove={handleMove} onTouchMove={handleTouchMove}>
+      <Wrapper
+        onMouseMove={handleMove}
+        onTouchMove={handleTouchMove}
+        // inform the HUE value
+        $color={Math.round(270 - distance * 150)}
+      >
         <ImageContainer $isTogether={distance < 0.001}>
           {matrix.map(([x, y], index) => (
             <ImgBox key={index} x={x} y={y} percent={distance} />
