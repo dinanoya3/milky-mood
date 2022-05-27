@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/milky-mood-react/static/js/main.f9a3c093.chunk.js",
-    "main.js.map": "/milky-mood-react/static/js/main.f9a3c093.chunk.js.map",
-    "runtime-main.js": "/milky-mood-react/static/js/runtime-main.2912d596.js",
-    "runtime-main.js.map": "/milky-mood-react/static/js/runtime-main.2912d596.js.map",
-    "static/js/2.2a451865.chunk.js": "/milky-mood-react/static/js/2.2a451865.chunk.js",
-    "static/js/2.2a451865.chunk.js.map": "/milky-mood-react/static/js/2.2a451865.chunk.js.map",
-    "index.html": "/milky-mood-react/index.html",
-    "static/js/2.2a451865.chunk.js.LICENSE.txt": "/milky-mood-react/static/js/2.2a451865.chunk.js.LICENSE.txt",
-    "static/media/logo.336f7ba3.svg": "/milky-mood-react/static/media/logo.336f7ba3.svg"
+    "main.js": "/milky-mood/static/js/main.9fdd416b.chunk.js",
+    "main.js.map": "/milky-mood/static/js/main.9fdd416b.chunk.js.map",
+    "runtime-main.js": "/milky-mood/static/js/runtime-main.a33fc487.js",
+    "runtime-main.js.map": "/milky-mood/static/js/runtime-main.a33fc487.js.map",
+    "static/js/2.ce7aaacf.chunk.js": "/milky-mood/static/js/2.ce7aaacf.chunk.js",
+    "static/js/2.ce7aaacf.chunk.js.map": "/milky-mood/static/js/2.ce7aaacf.chunk.js.map",
+    "index.html": "/milky-mood/index.html",
+    "static/js/2.ce7aaacf.chunk.js.LICENSE.txt": "/milky-mood/static/js/2.ce7aaacf.chunk.js.LICENSE.txt",
+    "static/media/logo.336f7ba3.svg": "/milky-mood/static/media/logo.336f7ba3.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2912d596.js",
-    "static/js/2.2a451865.chunk.js",
-    "static/js/main.f9a3c093.chunk.js"
+    "static/js/runtime-main.a33fc487.js",
+    "static/js/2.ce7aaacf.chunk.js",
+    "static/js/main.9fdd416b.chunk.js"
   ]
 }
