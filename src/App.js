@@ -65,14 +65,17 @@ const App = () => {
       {/* <h1>Hello world</h1>
       {/* TAGGED TEMPLATE LITERAL */}
       {/* <h2>{message`Dina`}</h2> */}
+      {/* from global styles */}
       <GlobalStyle />
       <Header />
+      {/* from global styles */}
       <Wrapper
         onMouseMove={handleMove}
         onTouchMove={handleTouchMove}
         // inform the HUE value
         $color={Math.round(270 - distance * 150)}
       >
+        {/* from global styles */}
         <ImageContainer $isTogether={distance < 0.001}>
           {matrix.map(([x, y], index) => (
             <ImgBox key={index} x={x} y={y} percent={distance} />
